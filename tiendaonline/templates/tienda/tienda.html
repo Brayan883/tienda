@@ -1,0 +1,32 @@
+{% extends 'partials/body.html' %}
+
+{% block titulo %}
+    Tienda
+{% endblock titulo %}
+
+{% block contenido %}
+      <div class="float-end mt-2 border" >
+        <p class="card-text"> Total: </p>
+      </div>
+    <div class="container d-flex justify-content-center flex-wrap">
+        {% for product in producto %}
+        <div class="card m-3" style="width: 18rem;">
+            <img src="{{product.imagen.url}}" style="height:200px;"  class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.nombre}}</h5>
+              <hr>
+              <p class="card-text">{{product.descripcion}}</p>
+              <hr>
+              <div class="row" >
+                  <div class="col-6">
+                    <p class="text-center border border-success py-1">{{product.precio}} $ </p>
+                  </div>
+                  <div class="col-6" >
+                    <a href="#" class="btn btn-primary d-block">Agregar</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+{% endblock contenido %}

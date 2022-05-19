@@ -1,0 +1,19 @@
+{% extends 'partials/body.html' %}
+{% block titulo %}
+    Servicios
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="container d-flex justify-content-center flex-wrap">
+    {% for servicio_db in servicio %}
+        <div class="card m-3" style="width: 18rem;">
+            <img  src="{{servicio_db.imagen.url}}" class="card-img-top" style="height:280px;"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{servicio_db.titulo}}</h5>
+              <p class="card-text">{{servicio_db.contenido}}</p>
+              {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+            </div>
+          </div>
+    {% endfor %}
+</div>
+{% endblock contenido %}
