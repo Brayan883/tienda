@@ -10,7 +10,7 @@ class CategoriaProducto(models.Model):
         return self.nombre
 
 class Producto(models.Model):
-    imagen = models.ImageField(upload_to='Producto')
+    imagen = models.ImageField(upload_to='categoria')
     nombre = models.CharField(max_length=60)
     descripcion = models.TextField(max_length=100)
     precio = models.FloatField()

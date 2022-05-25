@@ -1,4 +1,3 @@
-from xml.dom.minidom import Document
 from django.urls import path
 from proyectowebapp import views
 from django.conf import settings

@@ -1,8 +1,8 @@
 from django.shortcuts import render , redirect
 
 from tiendaonline.models import Producto
-from .carrito import  Carro
-# Create your views here.
+from .carrito_producto import  Carro
+
 def agregar_producto(request , producto_id):
     carro = Carro(request)
     producto_db = Producto.objects.get(id=producto_id)
